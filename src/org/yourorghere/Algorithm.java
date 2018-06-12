@@ -47,7 +47,7 @@ public class Algorithm {
         ants.forEach((ant) -> {
             ant.newTravel();
         });
-        for (currentTransition = 1; currentTransition < numOfCities; currentTransition++) {
+        for (currentTransition = 1; currentTransition <= numOfCities; currentTransition++) {
             ants.forEach((ant) -> {
                 ant.selectCity();
             });
@@ -103,7 +103,7 @@ public class Algorithm {
         private double chainLength;
 
         public Ant() {
-            this.citiesChain = new int[numOfCities];
+            this.citiesChain = new int[numOfCities + 1];
             this.visited = new boolean[numOfCities];
             newTravel();
         }
@@ -136,7 +136,14 @@ public class Algorithm {
 
         private double[] calcProbabilities() {
             double[] transitionProbabilities = new double[numOfCities];
-            double sumProbalities = 0.0;
+			if (currentTransition == numOfCities){
+				for (int i = 0; i < numOfCities; i++) {
+					transitionProbabilities[i] = 0;
+				}
+				transitionProbabilities[citiesChain[0]] = 1;
+				return transitionProbabilities;
+            }
+			double sumProbalities = 0.0;			
             for (int i = 0; i < numOfCities; i++) {
                 if (visited[i]) {
                     transitionProbabilities[i] = 0;
