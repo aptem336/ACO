@@ -12,12 +12,12 @@ public class Texts {
     public static String text5 = "Q - show/hide ants";
     public static String text6 = "CAPS - inverse colors";
     
-    public static String valueText1 = "SomeText";
-    public static String valueText2 = "SomeText";
+    public static String valueText1 = "P";
+    public static String valueText2 = "Q";
     public static String valueText3 = "SomeText";
     public static String valueText4 = "SomeText";
     public static String valueText5 = "SomeText";
 
-    public static String controls = "SomeText";
+    public static String controls = "(c) Nikita Rusetskii";
 
 }

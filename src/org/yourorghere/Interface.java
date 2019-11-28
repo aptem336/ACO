@@ -18,7 +18,6 @@ public class Interface extends JFrame {
 
     private void init() {
         
-        setType(Type.UTILITY);
         setSize(800, 800);
         setVisible(true);
         setResizable(false);

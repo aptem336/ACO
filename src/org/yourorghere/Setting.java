@@ -54,7 +54,7 @@ public class Setting extends JFrame {
 
     private void initComponent() {
         setType(Type.UTILITY);
-        setTitle("Setting");
+        setTitle("Settings");
         setLayout(null);
         setSize(500, 400);
         setVisible(false);
@@ -81,10 +81,11 @@ public class Setting extends JFrame {
             public void mouseExited(MouseEvent e) {
             }
         });
-        Credit = new JButton("Credit");
+        Credit = new JButton("Credits");
         Credit.setSize(90, 25);
         Credit.setLocation((getWidth() - Credit.getWidth()) / 2, ok.getY() - Credit.getHeight());
         Credit.addMouseListener(new MouseListener() {
+            @Override
             public void mouseClicked(MouseEvent e) {
             }
 
@@ -92,7 +93,7 @@ public class Setting extends JFrame {
             }
 
             public void mouseReleased(MouseEvent e) {
-                JOptionPane.showMessageDialog(null, Texts.controls, "Credit", 1);
+                JOptionPane.showMessageDialog(null, Texts.controls, "Credits", 1);
             }
 
             public void mouseEntered(MouseEvent e) {
@@ -110,12 +111,10 @@ public class Setting extends JFrame {
         slider1.setLocation((getWidth() - slider1.getWidth()) / 2, slider1.getHeight() + 20);
         slider1.setMinimum(Data.min1);
         slider1.setMaximum(Data.max1);
-        slider1.addChangeListener(new ChangeListener() {
-            public void stateChanged(ChangeEvent e) {
-                Data.tempValue1 = slider1.getValue();
-                label1.setText(Texts.valueText1 + " " + Data.valueInWork1);
-                Data.valueChanged1 = true;
-            }
+        slider1.addChangeListener((ChangeEvent e) -> {
+            Data.tempValue1 = slider1.getValue();
+            label1.setText(Texts.valueText1 + " " + Data.valueInWork1);
+            Data.valueChanged1 = true;
         });
         label1 = new JLabel();
         label1.setSize(LABEL_SIZE);
@@ -126,12 +125,10 @@ public class Setting extends JFrame {
         slider2.setLocation((getWidth() - slider2.getWidth()) / 2, slider1.getY() + slider1.getHeight() + slider2.getHeight() + 20);
         slider2.setMinimum(Data.min2);
         slider2.setMaximum(Data.max2);
-        slider2.addChangeListener(new ChangeListener() {
-            public void stateChanged(ChangeEvent e) {
-                Data.tempValue2 = slider2.getValue();
-                label2.setText(Texts.valueText2 + " " + Data.valueInWork2);
-                Data.valueChanged2 = true;
-            }
+        slider2.addChangeListener((ChangeEvent e) -> {
+            Data.tempValue2 = slider2.getValue();
+            label2.setText(Texts.valueText2 + " " + Data.valueInWork2);
+            Data.valueChanged2 = true;
         });
         label2 = new JLabel();
         label2.setSize(LABEL_SIZE);
@@ -142,12 +139,10 @@ public class Setting extends JFrame {
         slider3.setLocation((getWidth() - slider3.getWidth()) / 2, slider2.getY() + slider2.getHeight() + slider3.getHeight() + 20);
         slider3.setMinimum(Data.min3);
         slider3.setMaximum(Data.max3);
-        slider3.addChangeListener(new ChangeListener() {
-            public void stateChanged(ChangeEvent e) {
-                Data.tempValue3 = slider3.getValue();
-                label3.setText(Texts.valueText3 + " " + Data.valueInWork3);
-                Data.valueChanged3 = true;
-            }
+        slider3.addChangeListener((ChangeEvent e) -> {
+            Data.tempValue3 = slider3.getValue();
+            label3.setText(Texts.valueText3 + " " + Data.valueInWork3);
+            Data.valueChanged3 = true;
         });
         label3 = new JLabel();
         label3.setSize(LABEL_SIZE);
@@ -158,12 +153,10 @@ public class Setting extends JFrame {
         slider4.setLocation((getWidth() - slider4.getWidth()) / 2, slider3.getY() + slider3.getHeight() + slider4.getHeight() + 20);
         slider4.setMinimum(Data.min4);
         slider4.setMaximum(Data.max4);
-        slider4.addChangeListener(new ChangeListener() {
-            public void stateChanged(ChangeEvent e) {
-                Data.tempValue4 = slider4.getValue();
-                label4.setText(Texts.valueText4 + " " + Data.valueInWork4);
-                Data.valueChanged4 = true;
-            }
+        slider4.addChangeListener((ChangeEvent e) -> {
+            Data.tempValue4 = slider4.getValue();
+            label4.setText(Texts.valueText4 + " " + Data.valueInWork4);
+            Data.valueChanged4 = true;
         });
         label4 = new JLabel();
         label4.setSize(LABEL_SIZE);
@@ -174,12 +167,10 @@ public class Setting extends JFrame {
         slider5.setLocation((getWidth() - slider5.getWidth()) / 2, slider4.getY() + slider4.getHeight() + slider5.getHeight() + 20);
         slider5.setMinimum(Data.min5);
         slider5.setMaximum(Data.max5);
-        slider5.addChangeListener(new ChangeListener() {
-            public void stateChanged(ChangeEvent e) {
-                Data.tempValue5 = slider5.getValue();
-                label5.setText(Texts.valueText5 + " " + Data.valueInWork5);
-                Data.valueChanged5 = true;
-            }
+        slider5.addChangeListener((ChangeEvent e) -> {
+            Data.tempValue5 = slider5.getValue();
+            label5.setText(Texts.valueText5 + " " + Data.valueInWork5);
+            Data.valueChanged5 = true;
         });
         label5 = new JLabel();
         label5.setSize(LABEL_SIZE);

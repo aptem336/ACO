@@ -113,9 +113,11 @@ public class Data {
             for (int j = i + 1; j < cities.size(); j++) {
                 double[] first = cities.get(i);
                 double[] second = cities.get(j);
+                // fill edge matrix with its length
                 transitionsMatrix[i][j] = transitionsMatrix[j][i] = (Math.hypot(second[0] - first[0], second[1] - first[1]));
                 colorMatrix[i][j] = Data.defaultColor;
             }
+            // 
             transitionsMatrix[i][i] = 0;
             colorMatrix[i][i] = Data.defaultColor;
         }
