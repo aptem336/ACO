@@ -75,6 +75,7 @@ public class ACO implements GLEventListener {
         glut.glutBitmapString(GLUT.BITMAP_HELVETICA_18, "Right-click to open a setting and controls");
 
         gl.glColor4f(((Data.mainColor >> 24) & 0xFF) / 255f, ((Data.mainColor >> 16) & 0xFF) / 255f, ((Data.mainColor >> 8) & 0xFF) / 255f, ((Data.mainColor) & 0xFF) / 255f);
+        /*
         gl.glWindowPos2i(Texts.leftPadding, drawable.getHeight() - 45);
         glut.glutBitmapString(GLUT.BITMAP_HELVETICA_18, Texts.valueText1 + " " + Data.valueInWork1);
         gl.glWindowPos2i(Texts.leftPadding, drawable.getHeight() - 65);
@@ -85,7 +86,8 @@ public class ACO implements GLEventListener {
         glut.glutBitmapString(GLUT.BITMAP_HELVETICA_18, Texts.valueText4 + " " + Data.valueInWork4);
         gl.glWindowPos2i(Texts.leftPadding, drawable.getHeight() - 125);
         glut.glutBitmapString(GLUT.BITMAP_HELVETICA_18, Texts.valueText5 + " " + Data.valueInWork5);
-
+        */
+        
         gl.glWindowPos2i(drawable.getWidth() - Texts.rightPadding, drawable.getHeight() - 20);
         glut.glutBitmapString(GLUT.BITMAP_HELVETICA_18, Texts.text1);
         gl.glWindowPos2i(drawable.getWidth() - Texts.rightPadding, drawable.getHeight() - 40);
